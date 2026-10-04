@@ -10,39 +10,46 @@ content:
     type: file
     path: products.json
     format: json
-    list: true
     fields:
-      - name: name
-        label: Ürün adı
-        type: string
-        required: true
-      - name: price
-        label: Fiyat (₺)
-        type: number
-        required: true
-      - name: cat
-        label: Kategori
-        type: select
-        required: true
-        options:
-          values:
-            - { value: buket, label: Buketler }
-            - { value: gul, label: Güller }
-            - { value: vazo, label: "Vazo & Saksı" }
-            - { value: ozel, label: Özel Tasarım }
-      - name: img
-        label: Fotoğraf
-        type: image
-        required: true
-      - name: desc
-        label: Açıklama
-        type: text
-      - name: tag
-        label: Etiket
-        description: 'Fotoğrafın köşesinde görünür, ör. "En çok tercih edilen". Boş bırakılabilir.'
-        type: string
-      - name: active
-        label: Sitede göster
-        description: Kapatırsanız ürün silinmeden siteden gizlenir.
-        type: boolean
-        default: true
+      - name: urunler
+        label: Ürünler
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} · {price} ₺"
+        fields:
+          - name: name
+            label: Ürün adı
+            type: string
+            required: true
+          - name: price
+            label: Fiyat (₺)
+            type: number
+            required: true
+          - name: cat
+            label: Kategori
+            type: select
+            required: true
+            options:
+              values:
+                - { value: buket, label: Buketler }
+                - { value: gul, label: Güller }
+                - { value: vazo, label: "Vazo & Saksı" }
+                - { value: ozel, label: Özel Tasarım }
+          - name: img
+            label: Fotoğraf
+            type: image
+            required: true
+          - name: desc
+            label: Açıklama
+            type: text
+          - name: tag
+            label: Etiket
+            description: 'Fotoğrafın köşesinde görünür, ör. "En çok tercih edilen". Boş bırakılabilir.'
+            type: string
+          - name: active
+            label: Sitede göster
+            description: Kapatırsanız ürün silinmeden siteden gizlenir.
+            type: boolean
+            default: true

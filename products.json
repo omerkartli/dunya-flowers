@@ -15,7 +15,6 @@
       "cat": "gul",
       "img": "images/unnamed.webp",
       "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar.",
-      "tag": "",
       "active": true
     },
     {
@@ -24,7 +23,6 @@
       "cat": "buket",
       "img": "images/10.webp",
       "desc": "Beyaz lilyum, pembe gül ve mor krizantem.",
-      "tag": "",
       "active": true
     },
     {
@@ -33,7 +31,6 @@
       "cat": "buket",
       "img": "images/11.webp",
       "desc": "Papatya, pembe gül ve mor krizantem; pembe ambalaj.",
-      "tag": "",
       "active": true
     },
     {
@@ -42,7 +39,6 @@
       "cat": "buket",
       "img": "images/3.webp",
       "desc": "Pudra güller, lila krizantem ve okaliptüs.",
-      "tag": "",
       "active": true
     },
     {
@@ -60,7 +56,6 @@
       "cat": "buket",
       "img": "images/2.webp",
       "desc": "Beyaz ve krem tonlarında şık karışık buket.",
-      "tag": "",
       "active": true
     },
     {
@@ -69,7 +64,6 @@
       "cat": "ozel",
       "img": "images/9.webp",
       "desc": "Beyaz krizantem, pudra gül ve palmiye yapraklarıyla büyük tasarım.",
-      "tag": "",
       "active": true
     },
     {
@@ -78,7 +72,6 @@
       "cat": "vazo",
       "img": "images/5.webp",
       "desc": "Seramik vazoda pembe lilyum, gül ve yeşillikler.",
-      "tag": "",
       "active": true
     },
     {
@@ -87,7 +80,6 @@
       "cat": "vazo",
       "img": "images/12.webp",
       "desc": "Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay.",
-      "tag": "",
       "active": true
     },
     {
@@ -96,7 +88,6 @@
       "cat": "buket",
       "img": "images/6.webp",
       "desc": "Mor ambalajda gerbera, karanfil ve krizantem.",
-      "tag": "",
       "active": true
     },
     {
@@ -105,7 +96,6 @@
       "cat": "gul",
       "img": "images/mor.webp",
       "desc": "Turuncu güller ve mor krizantemler.",
-      "tag": "",
       "active": true
     },
     {
@@ -114,7 +104,6 @@
       "cat": "buket",
       "img": "images/8.webp",
       "desc": "Turuncu gül, pembe karanfil ve papatyalar.",
-      "tag": "",
       "active": true
     },
     {
@@ -133,6 +122,13 @@
       "img": "images/88.webp",
       "desc": "Kurutulmuş portakal, kozalak ve kırmızı meyvelerle.",
       "tag": "Yeni yıl",
+      "active": true
+    },
+    {
+      "name": "5'li Gül",
+      "price": 750,
+      "cat": "gul",
+      "img": "images/5ligül.png",
       "active": true
     }
   ]

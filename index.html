@@ -249,7 +249,7 @@
         <img class="tall" src="images/4.webp" alt="Dünya Flowers dükkânı önünde karışık buket">
         <img class="sq" src="images/13.webp" alt="Kırmızı gül buketi">
         <img class="sq" src="images/3.webp" alt="Pembe gül ve krizantem buketi">
-        <div class="badge-price">Buketler<b>1.000 – 3.000 ₺</b></div>
+        <div class="badge-price">Buketler<b id="priceRange">1.000 – 3.000 ₺</b></div>
       </div>
     </div>
   </section>
@@ -419,23 +419,7 @@
 <script>
   const PHONE = "905334222994";
 
-  const PRODUCTS = [
-    { id:"kirmizi-ask",   name:"Kırmızı Aşk",        img:"13.webp",      price:3000, cat:"gul",    tag:"En çok tercih edilen", desc:"Siyah özel ambalajda bol kırmızı gül buketi." },
-    { id:"klasik-gul",    name:"Klasik Kırmızı Gül", img:"unnamed.webp", price:1750, cat:"gul",    desc:"Kraft ambalajda kırmızı güller ve beyaz detaylar." },
-    { id:"bahar",         name:"Bahar Esintisi",     img:"10.webp",      price:1300, cat:"buket",  desc:"Beyaz lilyum, pembe gül ve mor krizantem." },
-    { id:"pembe-ruya",    name:"Pembe Rüya",         img:"11.webp",      price:1100, cat:"buket",  desc:"Papatya, pembe gül ve mor krizantem; pembe ambalaj." },
-    { id:"lila-masal",    name:"Lila Masal",         img:"3.webp",       price:1200, cat:"buket",  desc:"Pudra güller, lila krizantem ve okaliptüs." },
-    { id:"dunya-ozel",    name:"Dünya Özel",         img:"4.webp",       price:1450, cat:"ozel",   tag:"İmza tasarım", desc:"Lilyum, gül, papatya ve kuru otlarla gösterişli buket." },
-    { id:"beyaz-zarafet", name:"Beyaz Zarafet",      img:"2.webp",       price:1350, cat:"buket",  desc:"Beyaz ve krem tonlarında şık karışık buket." },
-    { id:"gelin-beyazi",  name:"Gelin Beyazı",       img:"9.webp",       price:1500, cat:"ozel",   desc:"Beyaz krizantem, pudra gül ve palmiye yapraklarıyla büyük tasarım." },
-    { id:"fusya-vazo",    name:"Fuşya Vazo",         img:"5.webp",       price:1400, cat:"vazo",   desc:"Seramik vazoda pembe lilyum, gül ve yeşillikler." },
-    { id:"baris-cicegi",  name:"Barış Çiçeği",       img:"12.webp",      price:1000, cat:"vazo",   desc:"Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay." },
-    { id:"mor-bahce",     name:"Mor Bahçe",          img:"6.webp",       price:1150, cat:"buket",  desc:"Mor ambalajda gerbera, karanfil ve krizantem." },
-    { id:"mor-turuncu",   name:"Gün Batımı",         img:"mor.webp",     price:1100, cat:"gul",    desc:"Turuncu güller ve mor krizantemler." },
-    { id:"mercan",        name:"Mercan Neşesi",      img:"8.webp",       price:1050, cat:"buket",  desc:"Turuncu gül, pembe karanfil ve papatyalar." },
-    { id:"kis-masali",    name:"Kış Masalı",         img:"7.webp",       price:1250, cat:"ozel",   tag:"Yeni yıl", desc:"Kutuda kırmızı meyveler, kozalak ve minik ayıcık." },
-    { id:"yilbasi",       name:"Yılbaşı Buketi",     img:"88.webp",      price:1300, cat:"ozel",   tag:"Yeni yıl", desc:"Kurutulmuş portakal, kozalak ve kırmızı meyvelerle." }
-  ];
+  let PRODUCTS = [];
 
   const CATS = [
     { id:"all",   label:"Tümü" },
@@ -447,6 +431,7 @@
 
   const fmt = n => n.toLocaleString("tr-TR") + " ₺";
   const $ = s => document.querySelector(s);
+  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
 
   const grid = $("#grid"), filters = $("#filters");
   let current = null;
@@ -456,19 +441,19 @@
       `<button class="chip${c.id===active?" on":""}" data-cat="${c.id}">${c.label}</button>`).join("");
   }
   function renderGrid(cat){
-    const list = cat==="all" ? PRODUCTS : PRODUCTS.filter(p => p.cat===cat);
+    const list = PRODUCTS.map((p, i) => ({...p, i})).filter(p => cat==="all" || p.cat===cat);
     grid.innerHTML = list.map(p => `
       <article class="card">
         <div class="ph">
-          <img loading="lazy" src="images/${p.img}" alt="${p.name}">
-          ${p.tag ? `<span class="tag">${p.tag}</span>` : ""}
+          <img loading="lazy" src="${esc(p.img)}" alt="${esc(p.name)}">
+          ${p.tag ? `<span class="tag">${esc(p.tag)}</span>` : ""}
         </div>
         <div class="body">
-          <h3>${p.name}</h3>
-          <p class="desc">${p.desc}</p>
+          <h3>${esc(p.name)}</h3>
+          <p class="desc">${esc(p.desc)}</p>
           <div class="row">
             <span class="price">${p.price.toLocaleString("tr-TR")}<small>₺</small></span>
-            <button class="btn btn-primary" data-order="${p.id}">Sipariş Ver</button>
+            <button class="btn btn-primary" data-order="${p.i}">Sipariş Ver</button>
           </div>
         </div>
       </article>`).join("");
@@ -479,7 +464,7 @@
   });
   grid.addEventListener("click", e => {
     const b = e.target.closest("[data-order]"); if(!b) return;
-    openOrder(PRODUCTS.find(p => p.id===b.dataset.order));
+    openOrder(PRODUCTS[b.dataset.order]);
   });
 
   // Modal
@@ -490,7 +475,7 @@
 
   function openOrder(p){
     current = p;
-    $("#mImg").src = "images/" + p.img; $("#mImg").alt = p.name;
+    $("#mImg").src = p.img; $("#mImg").alt = p.name;
     $("#mName").textContent = p.name;
     $("#mPrice").textContent = fmt(p.price);
     $("#sumPrice").textContent = fmt(p.price);
@@ -547,7 +532,19 @@
     window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank");
   });
 
-  renderFilters("all"); renderGrid("all"); syncMethod();
+  renderFilters("all"); syncMethod();
+  // Ürünler yönetim panelinden (Pages CMS) düzenlenen products.json dosyasından gelir
+  fetch("products.json", {cache:"no-cache"})
+    .then(r => r.json())
+    .then(list => {
+      PRODUCTS = list.filter(p => p.active !== false && p.name && p.img && Number(p.price) > 0)
+        .map(p => ({...p, price: Number(p.price)}));
+      renderGrid("all");
+      const prices = PRODUCTS.map(p => p.price);
+      if (prices.length) $("#priceRange").textContent =
+        `${Math.min(...prices).toLocaleString("tr-TR")} – ${Math.max(...prices).toLocaleString("tr-TR")} ₺`;
+    })
+    .catch(() => { grid.innerHTML = `<p>Ürünler yüklenemedi. Lütfen sayfayı yenileyin ya da WhatsApp'tan yazın.</p>`; });
   $("#yr").textContent = new Date().getFullYear();
 </script>
 </body>

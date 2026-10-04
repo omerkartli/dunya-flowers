@@ -536,7 +536,8 @@
   // Ürünler yönetim panelinden (Pages CMS) düzenlenen products.json dosyasından gelir
   fetch("products.json", {cache:"no-cache"})
     .then(r => r.json())
-    .then(list => {
+    .then(data => {
+      const list = Array.isArray(data) ? data : (data.urunler || []);
       PRODUCTS = list.filter(p => p.active !== false && p.name && p.img && Number(p.price) > 0)
         .map(p => ({...p, price: Number(p.price)}));
       renderGrid("all");

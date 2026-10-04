@@ -34,3 +34,18 @@ hosting 14 Kasım 2026'da bitiyor. Ondan sonra eskiye dönüş mümkün olmaz.
 3. `www` CNAME'ini (`omerkartli.github.io`) sil, yerine
    `www.dunyaflowers.com` → `dunyaflowers.com.` ekle.
 4. ftp CNAME ve TXT kaydına dokunulmadı; olduğu gibi kalır.
+
+## GitHub'a geçiş (4 Ekim 2026'da girildi)
+
+| Tür | Zone | Adres |
+|---|---|---|
+| A | dunyaflowers.com | 185.199.108.153 |
+| A | dunyaflowers.com | 185.199.109.153 |
+| A | dunyaflowers.com | 185.199.110.153 |
+| A | dunyaflowers.com | 185.199.111.153 |
+| CNAME | www.dunyaflowers.com | omerkartli.github.io. |
+
+ftp CNAME ve TXT (spf) kaydı değiştirilmedi.
+
+Natro paneli notu: CNAME eklerken "Alt Alan Adı" = `www`, "Server" =
+`omerkartli.github.io.` (sonunda nokta). A kaydında "Alt Alan Adı" boş bırakılır.

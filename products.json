@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Kırmızı Aşk",
+    "price": 3000,
+    "cat": "gul",
+    "img": "images/13.webp",
+    "desc": "Siyah özel ambalajda bol kırmızı gül buketi.",
+    "tag": "En çok tercih edilen",
+    "active": true
+  },
+  {
+    "name": "Klasik Kırmızı Gül",
+    "price": 1750,
+    "cat": "gul",
+    "img": "images/unnamed.webp",
+    "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Bahar Esintisi",
+    "price": 1300,
+    "cat": "buket",
+    "img": "images/10.webp",
+    "desc": "Beyaz lilyum, pembe gül ve mor krizantem.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Pembe Rüya",
+    "price": 1100,
+    "cat": "buket",
+    "img": "images/11.webp",
+    "desc": "Papatya, pembe gül ve mor krizantem; pembe ambalaj.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Lila Masal",
+    "price": 1200,
+    "cat": "buket",
+    "img": "images/3.webp",
+    "desc": "Pudra güller, lila krizantem ve okaliptüs.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Dünya Özel",
+    "price": 1450,
+    "cat": "ozel",
+    "img": "images/4.webp",
+    "desc": "Lilyum, gül, papatya ve kuru otlarla gösterişli buket.",
+    "tag": "İmza tasarım",
+    "active": true
+  },
+  {
+    "name": "Beyaz Zarafet",
+    "price": 1350,
+    "cat": "buket",
+    "img": "images/2.webp",
+    "desc": "Beyaz ve krem tonlarında şık karışık buket.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Gelin Beyazı",
+    "price": 1500,
+    "cat": "ozel",
+    "img": "images/9.webp",
+    "desc": "Beyaz krizantem, pudra gül ve palmiye yapraklarıyla büyük tasarım.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Fuşya Vazo",
+    "price": 1400,
+    "cat": "vazo",
+    "img": "images/5.webp",
+    "desc": "Seramik vazoda pembe lilyum, gül ve yeşillikler.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Barış Çiçeği",
+    "price": 1000,
+    "cat": "vazo",
+    "img": "images/12.webp",
+    "desc": "Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Mor Bahçe",
+    "price": 1150,
+    "cat": "buket",
+    "img": "images/6.webp",
+    "desc": "Mor ambalajda gerbera, karanfil ve krizantem.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Gün Batımı",
+    "price": 1100,
+    "cat": "gul",
+    "img": "images/mor.webp",
+    "desc": "Turuncu güller ve mor krizantemler.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Mercan Neşesi",
+    "price": 1050,
+    "cat": "buket",
+    "img": "images/8.webp",
+    "desc": "Turuncu gül, pembe karanfil ve papatyalar.",
+    "tag": "",
+    "active": true
+  },
+  {
+    "name": "Kış Masalı",
+    "price": 1250,
+    "cat": "ozel",
+    "img": "images/7.webp",
+    "desc": "Kutuda kırmızı meyveler, kozalak ve minik ayıcık.",
+    "tag": "Yeni yıl",
+    "active": true
+  },
+  {
+    "name": "Yılbaşı Buketi",
+    "price": 1300,
+    "cat": "ozel",
+    "img": "images/88.webp",
+    "desc": "Kurutulmuş portakal, kozalak ve kırmızı meyvelerle.",
+    "tag": "Yeni yıl",
+    "active": true
+  }
+]

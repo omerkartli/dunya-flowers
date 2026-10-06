@@ -49,3 +49,36 @@ ftp CNAME ve TXT (spf) kaydı değiştirilmedi.
 
 Natro paneli notu: CNAME eklerken "Alt Alan Adı" = `www`, "Server" =
 `omerkartli.github.io.` (sonunda nokta). A kaydında "Alt Alan Adı" boş bırakılır.
+
+## Cloudflare'e geçiş (6 Ekim 2026)
+
+DNS yönetimi Natro'dan Cloudflare'e taşındı (Cloudflare hesabı:
+Dunya.flowerss@gmail.com, Free plan). Alan adı kaydı hâlâ Natro'da.
+
+Natro → Alan Adı Yönetimi → dunyaflowers.com → DNS Sunucuları:
+
+| 1.DNS | 2.DNS |
+|---|---|
+| camilo.ns.cloudflare.com | kayleigh.ns.cloudflare.com |
+
+Cloudflare'deki kayıtlar (hepsi **DNS only / gri bulut**; turuncu yapılırsa
+GitHub Pages HTTPS sertifikasını yenileyemeyebilir):
+
+| Tür | Ad | Değer |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | omerkartli.github.io |
+| TXT | @ | "v=spf1 include:_spfcls.natrohost.com include:_netblockshalon.natrohost.com ~all" |
+
+Eski `ftp` CNAME kaydı silindi.
+
+Geri dönüş: Natro'da DNS sunucularını tekrar NS1.NATROHOST.COM /
+NS2.NATROHOST.COM yapmak. Natro hostingi 14 Kasım 2026'da bitince Natro
+tarafındaki kayıtlar silinebilir; o tarihten sonra bu yol çalışmaz.
+
+**Dikkat:** Alan adı kaydı da 14 Kasım 2026'da bitiyor. Ondan önce Natro'da
+yenilenmeli ya da Cloudflare Registrar'a transfer edilmeli (transfer 1 yıllık
+yenilemeyi de içerir).

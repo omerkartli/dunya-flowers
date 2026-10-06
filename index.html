@@ -36,7 +36,10 @@
 
   /* Header */
   header{position:sticky;top:0;z-index:40;background:rgba(251,247,245,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px}
+  .logo-img{display:block;line-height:0}
+  .logo-img img{height:72px;width:auto}
+  @media (max-width:600px){ .nav{height:72px} .logo-img img{height:60px} }
   .logo{display:flex;align-items:baseline;gap:6px;color:var(--plum-deep)}
   .logo b{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:600;letter-spacing:.06em}
   .logo i{font-family:"Cormorant Garamond",serif;font-size:20px;color:var(--gold)}
@@ -222,7 +225,7 @@
     "streetAddress": "Cumhuriyet Mah., Demokrasi Cd. No:15/A",
     "addressLocality": "Çekmeköy",
     "addressRegion": "İstanbul",
-    "postalCode": "34000",
+    "postalCode": "34788",
     "addressCountry": "TR"
   },
   "sameAs": ["https://www.instagram.com/dunya.flowers/"]
@@ -233,7 +236,7 @@
 
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><b>DÜNYA</b><i>Flowers</i></a>
+    <a href="#" class="logo-img"><img src="images/logo.webp" width="440" height="360" alt="Dünya Flower Studio"></a>
     <ul>
       <li><a href="#urunler">Çiçekler</a></li>
       <li><a href="#teslimat">Teslimat</a></li>
@@ -344,7 +347,7 @@
         <div class="info">
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <div><b>Adres</b>Cumhuriyet Mah., Demokrasi Cd. No:15/A<br>34000 Çekmeköy / İstanbul</div>
+            <div><b>Adres</b>Cumhuriyet Mah., Demokrasi Cd. No:15/A<br>34788 Çekmeköy / İstanbul</div>
           </div>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>

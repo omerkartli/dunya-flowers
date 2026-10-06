@@ -82,3 +82,11 @@ tarafındaki kayıtlar silinebilir; o tarihten sonra bu yol çalışmaz.
 **Dikkat:** Alan adı kaydı da 14 Kasım 2026'da bitiyor. Ondan önce Natro'da
 yenilenmeli ya da Cloudflare Registrar'a transfer edilmeli (transfer 1 yıllık
 yenilemeyi de içerir).
+
+## Cloudflare Registrar'a transfer (6 Ekim 2026)
+
+Alan adı kaydının Natro'dan Cloudflare Registrar'a transferi başlatıldı
+(ücret $10.46, 1 yıllık uzatma dahil, otomatik yenilemeli). Kayıt sahibi:
+Ali Rıza Kaçar / Dünya Flowers, e-posta dunya.flowerss@gmail.com.
+Transfer en geç 7 gün içinde tamamlanır; tamamlanınca yeni bitiş tarihi
+14 Kasım 2027 olur. Natro hostingi yenilenmeyecek.

@@ -445,6 +445,25 @@
 <script>
   const PHONE = "905334222994";
 
+  // İstatistik (Umami, çerezsiz). Kişisel veri (ad, telefon, adres) gönderilmez.
+  const UMAMI_ID = "f18cc63d-43e2-44fb-b65c-728dedc0f216";
+  if (UMAMI_ID) {
+    const sc = document.createElement("script");
+    sc.defer = true; sc.src = "https://cloud.umami.is/script.js"; sc.dataset.websiteId = UMAMI_ID;
+    document.head.appendChild(sc);
+  }
+  const track = (name, data) => { try { window.umami && window.umami.track(name, data); } catch (e) {} };
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a[href]"); if (!a) return;
+    const yer = a.id === "fab" ? "yuzen-buton" : a.closest(".mbar") ? "alt-bar"
+      : (a.closest("header") ? "ust-menu" : a.closest("footer") ? "alt-bilgi" : a.closest("section[id]")?.id) || "sayfa";
+    const href = a.getAttribute("href");
+    if (href.startsWith("tel:")) track("ara", { yer });
+    else if (href.includes("wa.me")) track("whatsapp", { yer });
+    else if (href.includes("instagram.com")) track("instagram", { yer });
+    else if (href.includes("google.com/maps")) track("yol-tarifi", { yer });
+  });
+
   let PRODUCTS = [];
 
   const CATS = [
@@ -501,6 +520,7 @@
 
   function openOrder(p){
     current = p;
+    track("siparis-formu-acildi", { urun: p.name, fiyat: p.price });
     $("#mImg").src = p.img; $("#mImg").alt = p.name;
     $("#mName").textContent = p.name;
     $("#mPrice").textContent = fmt(p.price);
@@ -555,6 +575,7 @@
     const note = $("#fNote").value.trim();
     if(note) lines.push("", `*Kart notu:* ${note}`);
 
+    track("siparis-gonderildi", { urun: current.name, fiyat: current.price, teslim: delivery ? "adrese" : "gelip-alma", kart_notu: note ? "var" : "yok" });
     window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank");
   });
 

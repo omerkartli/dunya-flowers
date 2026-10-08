@@ -52,8 +52,8 @@ Natro paneli notu: CNAME eklerken "Alt Alan Adı" = `www`, "Server" =
 
 ## Cloudflare'e geçiş (6 Ekim 2026)
 
-DNS yönetimi Natro'dan Cloudflare'e taşındı (Cloudflare hesabı:
-Dunya.flowerss@gmail.com, Free plan). Alan adı kaydı hâlâ Natro'da.
+DNS yönetimi Natro'dan Cloudflare'e taşındı (dükkânın Cloudflare hesabı,
+Free plan). Alan adı kaydı hâlâ Natro'da.
 
 Natro → Alan Adı Yönetimi → dunyaflowers.com → DNS Sunucuları:
 
@@ -87,6 +87,6 @@ yenilemeyi de içerir).
 
 Alan adı kaydının Natro'dan Cloudflare Registrar'a transferi başlatıldı
 (ücret $10.46, 1 yıllık uzatma dahil, otomatik yenilemeli). Kayıt sahibi:
-Ali Rıza Kaçar / Dünya Flowers, e-posta dunya.flowerss@gmail.com.
+Dünya Flowers (iletişim bilgileri Cloudflare hesabında).
 Transfer en geç 7 gün içinde tamamlanır; tamamlanınca yeni bitiş tarihi
 14 Kasım 2027 olur. Natro hostingi yenilenmeyecek.

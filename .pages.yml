@@ -48,6 +48,21 @@ content:
             label: Etiket
             description: 'Fotoğrafın köşesinde görünür, ör. "En çok tercih edilen". Boş bırakılabilir.'
             type: string
+          - name: gunler
+            label: Özel günler
+            description: Ürün seçilen özel gün sayfalarında gösterilir. Bir güne hiç ürün seçilmezse o sayfada tüm ürünler görünür.
+            type: select
+            options:
+              multiple: true
+              values:
+                - { value: ogretmenler-gunu, label: Öğretmenler Günü }
+                - { value: yilbasi, label: Yılbaşı }
+                - { value: sevgililer-gunu, label: Sevgililer Günü }
+                - { value: kadinlar-gunu, label: Kadınlar Günü }
+                - { value: anneler-gunu, label: Anneler Günü }
+                - { value: babalar-gunu, label: Babalar Günü }
+                - { value: dogum-gunu, label: Doğum Günü }
+                - { value: acilis-tebrik, label: Açılış ve Tebrik }
           - name: active
             label: Sitede göster
             description: Kapatırsanız ürün silinmeden siteden gizlenir.

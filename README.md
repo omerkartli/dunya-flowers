@@ -6,7 +6,8 @@ Düz HTML/CSS/JS, build adımı yok. GitHub Pages'te `main` dalının kökünden
 
 - `index.html` — ana sayfa
 - `assets/site.css`, `assets/site.js` — tüm sayfaların ortak stili ve kodu
-- `ozel-gunler/`, `ogretmenler-gunu/`, `anneler-gunu/` … — özel gün sayfaları; `_tools/ozel_gunler.py` ile üretilir (index.html'de üst menü ya da alt bilgi değişince tekrar çalıştırın)
+- `ozel-gunler/`, `ogretmenler-gunu/`, `anneler-gunu/` … — özel gün sayfaları (metinleri `_tools/ozel_gunler.py` içinde)
+- `_tools/build.py` — ürün kartlarını HTML'e yazar, ürün bilgisi etiketini, özel gün sayfalarını ve `sitemap.xml`'i üretir. `products.json`, `index.html` ya da `_tools/` değişince GitHub Actions (`.github/workflows/build.yml`) bunu kendiliğinden çalıştırır; elle: `python3 _tools/build.py`
 - `404.html` — eski/kırık adresleri ana sayfaya yönlendirir
 - `products.json` — ürünler ve fiyatlar (yönetim panelinden düzenlenir)
 - `.pages.yml` — yönetim paneli (Pages CMS) ayarları

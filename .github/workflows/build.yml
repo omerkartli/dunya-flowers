@@ -1,0 +1,39 @@
+# Panelden (Pages CMS) ürün değişince ürün kartlarını, özel gün sayfalarını ve
+# site haritasını yeniden üretir (_tools/build.py) ve sonucu main'e kaydeder.
+name: Sayfaları güncelle
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - products.json
+      - index.html
+      - _tools/**
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sayfalari-guncelle
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sayfaları üret
+        run: python3 _tools/build.py
+      - name: Değişiklik varsa kaydet
+        run: |
+          if git diff --quiet; then
+            echo "Değişiklik yok."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Sayfaları ürünlere göre güncelle (otomatik)"
+          git pull --rebase origin main
+          git push origin HEAD:main

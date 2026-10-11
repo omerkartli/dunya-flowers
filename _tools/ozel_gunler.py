@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Özel gün sayfalarını üretir: /ozel-gunler/ ve her gün için /<slug>/index.html.
 
-Ortak üst menü, alt bilgi ve sipariş penceresi index.html'den alınır; bu yüzden
-index.html'de üst menü ya da alt bilgi değişirse bu betiği tekrar çalıştırın:
+Ortak üst menü, alt bilgi ve sipariş penceresi index.html'den alınır. Bu dosya
+_tools/build.py tarafından çağrılır (index.html güncellendikten sonra import edilir):
 
-    python3 _tools/ozel_gunler.py
+    python3 _tools/build.py
 
 Ürünler sayfada products.json'dan yüklenir. Panelde (Pages CMS) bir ürünün
 "Özel günler" alanında işaretli günlerin sayfasında o ürün gösterilir; bir güne
@@ -185,6 +185,12 @@ GUNLER = [
   },
 ]
 
+ORTAK_SSS = [
+  ("Aynı gün teslimat yapıyor musunuz?", "Evet, Çekmeköy, Ümraniye ve Sancaktepe'ye aynı gün teslimat yapıyoruz. Özel günlerde yoğunluk olduğu için önceden sipariş vermenizi öneririz."),
+  ("Ödemeyi nasıl yapabilirim?", "Adrese gönderimde ödeme havale/EFT ile alınır; banka bilgileri sipariş onayında yalnızca 0533 422 29 94 numaralı WhatsApp hattımızdan iletilir. Dükkândan teslim alırken kredi kartı veya nakitle ödeyebilirsiniz."),
+]
+CARDS = lambda slug: ""  # build.py ürün kartlarını (HTML) buraya verir
+
 idx = (ROOT / "index.html").read_text(encoding="utf-8")
 def grab(pattern):
     m = re.search(pattern, idx, re.S)
@@ -256,8 +262,8 @@ def page(g):
         prose += "".join(f"<p>{e(p)}</p>\n" for p in paras if not p.startswith("• "))
         if items:
             prose += "<ul>" + "".join(f"<li>{e(p[2:])}</li>" for p in items) + "</ul>\n"
-    if g["sss"]:
-        prose += "<h2>Sık sorulan sorular</h2>\n" + "".join(f"<h3>{e(q)}</h3>\n<p>{e(a)}</p>\n" for q, a in g["sss"])
+    sss = g["sss"] + ORTAK_SSS
+    prose += "<h2>Sık sorulan sorular</h2>\n" + "".join(f"<h3>{e(q)}</h3>\n<p>{e(a)}</p>\n" for q, a in sss)
     wa = wa_link(f'Merhaba, {g["ad"]} için çiçek siparişi vermek istiyorum.')
     eyebrow = f'✿ {e(g["tarih"])}' if g["tarih"] else "✿ Çekmeköy'ün çiçekçisi"
     return f'''{head(g["title"], g["desc"], path, crumbs)}
@@ -283,9 +289,9 @@ def page(g):
     <div class="wrap">
       <div class="head">
         <h2>{e(g["ad"])} için çiçeklerimiz</h2>
-        <p>Tüm tasarımlar o gün taze çiçeklerle hazırlanır. Çekmeköy, Ümraniye ve Sancaktepe'ye teslimat; dükkândan teslim alma her gün 08:00–21:00.</p>
+        <p>Tüm tasarımlar o gün taze çiçeklerle hazırlanır. Çekmeköy, Ümraniye ve Sancaktepe'ye aynı gün teslimat; dükkândan teslim alma her gün 08:00–21:00.</p>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="grid" id="grid">{CARDS(g["slug"])}</div>
       <div class="custom">
         <div>
           <h3>Aklınızda başka bir tasarım mı var?</h3>
@@ -351,13 +357,12 @@ def hub():
 </html>
 '''
 
-(ROOT / "ozel-gunler").mkdir(exist_ok=True)
-(ROOT / "ozel-gunler" / "index.html").write_text(hub(), encoding="utf-8")
-for g in GUNLER:
-    (ROOT / g["slug"]).mkdir(exist_ok=True)
-    (ROOT / g["slug"] / "index.html").write_text(page(g), encoding="utf-8")
-
-urls = ["/", "/ozel-gunler/"] + [f'/{g["slug"]}/' for g in GUNLER]
-(ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    + "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n", encoding="utf-8")
-print("ok:", ", ".join(urls))
+def main(cards_for):
+    global CARDS
+    CARDS = cards_for
+    (ROOT / "ozel-gunler").mkdir(exist_ok=True)
+    (ROOT / "ozel-gunler" / "index.html").write_text(hub(), encoding="utf-8")
+    for g in GUNLER:
+        (ROOT / g["slug"]).mkdir(exist_ok=True)
+        (ROOT / g["slug"] / "index.html").write_text(page(g), encoding="utf-8")
+    return ["/ozel-gunler/"] + [f'/{g["slug"]}/' for g in GUNLER]

@@ -4,7 +4,10 @@
 
 Düz HTML/CSS/JS, build adımı yok. GitHub Pages'te `main` dalının kökünden yayınlanır.
 
-- `index.html` — sayfanın tamamı
+- `index.html` — ana sayfa
+- `assets/site.css`, `assets/site.js` — tüm sayfaların ortak stili ve kodu
+- `ozel-gunler/`, `ogretmenler-gunu/`, `anneler-gunu/` … — özel gün sayfaları; `_tools/ozel_gunler.py` ile üretilir (index.html'de üst menü ya da alt bilgi değişince tekrar çalıştırın)
+- `404.html` — eski/kırık adresleri ana sayfaya yönlendirir
 - `products.json` — ürünler ve fiyatlar (yönetim panelinden düzenlenir)
 - `.pages.yml` — yönetim paneli (Pages CMS) ayarları
 - `images/` — ürün fotoğrafları

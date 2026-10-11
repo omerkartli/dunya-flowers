@@ -4,8 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://www.dunyaflowers.com/">
-<title>Dünya Flowers · Çekmeköy Çiçekçi</title>
-<meta name="description" content="Dünya Flowers – Çekmeköy'de taze buketler, güller ve saksı çiçekleri. Sipariş verin, hazırlayalım; gelip alın ya da adresinize gönderelim.">
+<title>Çekmeköy Çiçekçi · Dünya Flowers | Çiçek Siparişi ve Teslimat</title>
+<meta name="description" content="Dünya Flowers, Çekmeköy çiçekçi: taze buketler, güller ve saksı çiçekleri. Her gün 08:00–21:00. Çekmeköy, Ümraniye ve Sancaktepe'ye teslimat; WhatsApp'tan kolay sipariş.">
+<meta name="theme-color" content="#3a1740">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Dünya Flowers">
+<meta property="og:title" content="Dünya Flowers · Çekmeköy Çiçekçi">
+<meta property="og:description" content="Taze buketler, güller ve saksı çiçekleri. Çekmeköy, Ümraniye ve Sancaktepe'ye teslimat. WhatsApp'tan sipariş: 0533 422 29 94">
+<meta property="og:url" content="https://www.dunyaflowers.com/">
+<meta property="og:image" content="https://www.dunyaflowers.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dünya Flowers dükkânı önünde karışık çiçek buketi">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -66,7 +80,9 @@
   .hero{padding:56px 0 72px;background:radial-gradient(ellipse at 85% 10%,var(--lilac) 0,transparent 55%),radial-gradient(ellipse at 0% 100%,var(--lilac-soft) 0,transparent 50%)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
-  .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(42px,6vw,72px);line-height:1.02;color:var(--plum-deep);margin:14px 0 18px}
+  .hero h1 .eyebrow{display:flex;font-family:Manrope,system-ui,sans-serif;line-height:1.6;margin-bottom:14px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(42px,6vw,72px);line-height:1.02;color:var(--plum-deep);margin:0 0 18px}
   .hero h1 em{color:var(--plum);font-style:italic}
   .hero p.lead{font-size:18px;color:var(--muted);max-width:480px}
   .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 28px}
@@ -218,8 +234,22 @@
   "@type": "Florist",
   "name": "Dünya Flowers",
   "url": "https://www.dunyaflowers.com/",
-  "image": "https://www.dunyaflowers.com/images/4.webp",
+  "image": "https://www.dunyaflowers.com/images/og-image.jpg",
+  "logo": "https://www.dunyaflowers.com/images/logo.webp",
   "telephone": "+905334222994",
+  "priceRange": "₺₺",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "21:00"
+  }],
+  "areaServed": [
+    {"@type": "City", "name": "Çekmeköy"},
+    {"@type": "City", "name": "Ümraniye"},
+    {"@type": "City", "name": "Sancaktepe"}
+  ],
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=D%C3%BCnya+Flowers+Demokrasi+Cd.+15%2FA+%C3%87ekmek%C3%B6y",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Cumhuriyet Mah., Demokrasi Cd. No:15/A",
@@ -254,8 +284,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">✿ Çekmeköy'ün çiçekçisi</span>
-        <h1 class="serif">Sevdiklerinize <em>en taze</em> haliyle.</h1>
+        <h1 class="serif"><span class="eyebrow">✿ Çekmeköy'ün çiçekçisi</span> Sevdiklerinize <em>en taze</em> haliyle.</h1>
         <p class="lead">Buketinizi seçin, siparişinizi verin; biz özenle hazırlayalım. İster dükkânımıza gelip alın, ister adresinize iletelim.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#urunler">Çiçekleri İncele</a>
@@ -270,7 +299,7 @@
         </div>
       </div>
       <div class="hero-media">
-        <img class="tall" src="images/4.webp" alt="Dünya Flowers dükkânı önünde karışık buket">
+        <img class="tall" src="images/4.webp" fetchpriority="high" alt="Çekmeköy Dünya Flowers dükkânı önünde karışık çiçek buketi">
         <img class="sq" src="images/13.webp" alt="Kırmızı gül buketi">
         <img class="sq" src="images/3.webp" alt="Pembe gül ve krizantem buketi">
         <div class="badge-price">Buketler<b id="priceRange">1.000 – 3.000 ₺</b></div>
@@ -279,7 +308,8 @@
   </section>
 
   <!-- How it works -->
-  <section class="steps">
+  <section class="steps" aria-labelledby="nasil">
+    <h2 id="nasil" class="sr-only">Nasıl sipariş verilir?</h2>
     <div class="wrap steps-grid">
       <div class="step"><div class="num">1</div><div><h3>Çiçeğinizi seçin</h3><p>Buket, gül ya da saksı çiçeği — beğendiğinize "Sipariş Ver" deyin.</p></div></div>
       <div class="step"><div class="num">2</div><div><h3>Biz hazırlayalım</h3><p>Siparişiniz WhatsApp'tan bize ulaşır, onaylar ve taze çiçeklerle hazırlarız.</p></div></div>
@@ -330,7 +360,7 @@
           <h3>Adrese Gönderelim</h3>
           <p>Sevdiklerinize sürpriz yapın; çiçeğinizi istediğiniz adrese biz ulaştıralım.</p>
           <ul>
-            <li>Çekmeköy ve çevresine teslimat</li>
+            <li>Çekmeköy, Ümraniye ve Sancaktepe'ye teslimat</li>
             <li>İsterseniz kartınıza özel notunuzu yazarız</li>
             <li>Teslimat ücreti adrese göre sipariş onayında bildirilir</li>
           </ul>
@@ -359,7 +389,7 @@
           </div>
           <div class="info-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            <div><b>Çalışma saatleri</b>Kapanış saati: 21:00</div>
+            <div><b>Çalışma saatleri</b>Her gün 08:00 – 21:00</div>
           </div>
           <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=D%C3%BCnya+Flowers+Demokrasi+Cd.+15%2FA+%C3%87ekmek%C3%B6y">Yol Tarifi Al</a>
           <p class="notice" role="note"><b>Dikkat:</b> dunyaflowers.online ve benzeri adreslerle hiçbir ilgimiz yoktur. Resmi ve tek web sitemiz <b>dunyaflowers.com</b>, tek telefon ve WhatsApp hattımız <b>0533 422 29 94</b>'tür. Sipariş vermeden önce numarayı kontrol edin.</p>
@@ -490,7 +520,7 @@
     grid.innerHTML = list.map(p => `
       <article class="card">
         <div class="ph">
-          <img loading="lazy" src="${esc(p.img)}" alt="${esc(p.name)}">
+          <img loading="lazy" decoding="async" src="${esc(p.img)}" alt="${esc(p.name)} çiçek buketi">
           ${p.tag ? `<span class="tag">${esc(p.tag)}</span>` : ""}
         </div>
         <div class="body">

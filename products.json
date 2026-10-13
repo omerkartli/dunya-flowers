@@ -14,15 +14,15 @@
       "price": 1750,
       "cat": "gul",
       "img": "images/klasik-kirmizi-gul-buketi.webp",
-      "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar. (25'li gü)",
+      "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar. (25'li gül)",
       "active": true
     },
     {
-      "name": "Bahar Esintisi",
-      "price": 1300,
+      "name": "Mercan Neşesi",
+      "price": 850,
       "cat": "buket",
-      "img": "images/bahar-esintisi-buket.webp",
-      "desc": "Beyaz lilyum, pembe gül ve mor krizantem.",
+      "img": "images/mercan-nesesi-buket.webp",
+      "desc": "Turuncu gül, pembe karanfil ve papatyalar.",
       "active": true
     },
     {
@@ -42,6 +42,31 @@
       "active": true
     },
     {
+      "name": "Barış Çiçeği",
+      "price": 1000,
+      "cat": "vazo",
+      "img": "images/baris-cicegi-saksi.webp",
+      "desc": "Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay.",
+      "active": true
+    },
+    {
+      "name": "Kış Masalı",
+      "price": 1250,
+      "cat": "ozel",
+      "img": "images/kis-masali-ozel-tasarim.webp",
+      "desc": "Kutuda kırmızı meyveler, kozalak ve minik ayıcık.",
+      "tag": "Yeni yıl",
+      "active": true
+    },
+    {
+      "name": "Bahar Esintisi",
+      "price": 1300,
+      "cat": "buket",
+      "img": "images/bahar-esintisi-buket.webp",
+      "desc": "Beyaz lilyum, pembe gül ve mor krizantem.",
+      "active": true
+    },
+    {
       "name": "Dünya Özel",
       "price": 1450,
       "cat": "ozel",
@@ -51,35 +76,10 @@
       "active": true
     },
     {
-      "name": "Beyaz Zarafet",
-      "price": 4000,
-      "cat": "buket",
-      "img": "images/beyaz-zarafet-buket.webp",
-      "desc": "Beyaz ve krem tonlarında şık karışık buket.",
-      "active": true
-    },
-    {
-      "name": "Gelin Beyazı",
-      "price": 4000,
-      "cat": "ozel",
-      "img": "images/gelin-beyazi-ozel-tasarim.webp",
-      "desc": "Beyaz krizantem, pudra gül ve palmiye yapraklarıyla büyük tasarım.",
-      "active": true
-    },
-    {
-      "name": "Fuşya Vazo",
+      "name": "Lilyum Aranjman",
       "price": 1600,
-      "cat": "vazo",
-      "img": "images/fusya-vazo-cicek.webp",
-      "desc": "Seramik vazoda pembe lilyum, gül ve yeşillikler.",
-      "active": true
-    },
-    {
-      "name": "Barış Çiçeği",
-      "price": 1000,
-      "cat": "vazo",
-      "img": "images/baris-cicegi-saksi.webp",
-      "desc": "Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay.",
+      "cat": "buket",
+      "img": "images/lilyum-aranjman.webp",
       "active": true
     },
     {
@@ -99,23 +99,6 @@
       "active": true
     },
     {
-      "name": "Mercan Neşesi",
-      "price": 850,
-      "cat": "buket",
-      "img": "images/mercan-nesesi-buket.webp",
-      "desc": "Turuncu gül, pembe karanfil ve papatyalar.",
-      "active": true
-    },
-    {
-      "name": "Kış Masalı",
-      "price": 1250,
-      "cat": "ozel",
-      "img": "images/kis-masali-ozel-tasarim.webp",
-      "desc": "Kutuda kırmızı meyveler, kozalak ve minik ayıcık.",
-      "tag": "Yeni yıl",
-      "active": true
-    },
-    {
       "name": "Yılbaşı Buketi",
       "price": 1300,
       "cat": "ozel",
@@ -125,10 +108,27 @@
       "active": true
     },
     {
-      "name": "Lilyum Aranjman",
+      "name": "Fuşya Vazo",
       "price": 1600,
+      "cat": "vazo",
+      "img": "images/fusya-vazo-cicek.webp",
+      "desc": "Seramik vazoda pembe lilyum, gül ve yeşillikler.",
+      "active": true
+    },
+    {
+      "name": "Gelin Beyazı",
+      "price": 4000,
+      "cat": "ozel",
+      "img": "images/gelin-beyazi-ozel-tasarim.webp",
+      "desc": "Beyaz krizantem, pudra gül ve palmiye yapraklarıyla büyük tasarım.",
+      "active": true
+    },
+    {
+      "name": "Beyaz Zarafet",
+      "price": 4000,
       "cat": "buket",
-      "img": "images/lilyum-aranjman.webp",
+      "img": "images/beyaz-zarafet-buket.webp",
+      "desc": "Beyaz ve krem tonlarında şık karışık buket.",
       "active": true
     }
   ]

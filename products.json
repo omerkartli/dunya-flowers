@@ -5,7 +5,7 @@
       "price": 3000,
       "cat": "gul",
       "img": "images/kirmizi-ask-gul-buketi.webp",
-      "desc": "Siyah özel ambalajda bol kırmızı gül buketi.",
+      "desc": "Siyah özel ambalajda bol kırmızı gül buketi. (41'li gül)",
       "tag": "En çok tercih edilen",
       "active": true
     },
@@ -14,7 +14,7 @@
       "price": 1750,
       "cat": "gul",
       "img": "images/klasik-kirmizi-gul-buketi.webp",
-      "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar.",
+      "desc": "Kraft ambalajda kırmızı güller ve beyaz detaylar. (25'li gü)",
       "active": true
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "name": "Pembe Rüya",
-      "price": 1100,
+      "price": 1000,
       "cat": "buket",
       "img": "images/pembe-ruya-buket.webp",
       "desc": "Papatya, pembe gül ve mor krizantem; pembe ambalaj.",
@@ -35,7 +35,7 @@
     },
     {
       "name": "Lila Masal",
-      "price": 1200,
+      "price": 1000,
       "cat": "buket",
       "img": "images/lila-masal-buket.webp",
       "desc": "Pudra güller, lila krizantem ve okaliptüs.",
@@ -68,7 +68,7 @@
     },
     {
       "name": "Fuşya Vazo",
-      "price": 1800,
+      "price": 1600,
       "cat": "vazo",
       "img": "images/fusya-vazo-cicek.webp",
       "desc": "Seramik vazoda pembe lilyum, gül ve yeşillikler.",
@@ -76,7 +76,7 @@
     },
     {
       "name": "Barış Çiçeği",
-      "price": 1250,
+      "price": 1000,
       "cat": "vazo",
       "img": "images/baris-cicegi-saksi.webp",
       "desc": "Saksıda Spathiphyllum; uzun ömürlü, bakımı kolay.",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Mercan Neşesi",
-      "price": 1050,
+      "price": 850,
       "cat": "buket",
       "img": "images/mercan-nesesi-buket.webp",
       "desc": "Turuncu gül, pembe karanfil ve papatyalar.",

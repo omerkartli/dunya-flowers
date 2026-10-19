@@ -17,6 +17,7 @@ document.addEventListener("click", e => {
   else if (href.includes("wa.me")) track("whatsapp", { yer });
   else if (href.includes("instagram.com")) track("instagram", { yer });
   else if (href.includes("google.com/maps")) track("yol-tarifi", { yer });
+  else if (a.classList.contains("btn-review")) track("yorum-yap", { yer });
 });
 
 // Özel gün sayfalarında <body data-gun="..." data-gun-adi="..."> bulunur

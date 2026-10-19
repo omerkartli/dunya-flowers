@@ -63,6 +63,12 @@ header{position:sticky;top:0;z-index:40;background:rgba(251,247,245,.88);backdro
 .rating{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
 .stars{color:#f4b400;letter-spacing:2px;font-size:16px}
 .rating strong{color:var(--ink)}
+.rating{flex-wrap:wrap}
+.btn-review{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--gold);color:var(--plum-deep);background:#fff;font-weight:700;font-size:14px;line-height:1;transition:background .15s,color .15s}
+.btn-review svg{width:15px;height:15px;color:#f4b400}
+.btn-review:hover{background:var(--plum-deep);color:#fff;border-color:var(--plum-deep)}
+footer .btn-review{background:transparent;color:#fff;border-color:#e2c58e}
+footer .btn-review:hover{background:#fff;color:var(--plum-deep)}
 .hero-media{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .hero-media img{border-radius:var(--radius);object-fit:cover;width:100%;box-shadow:var(--shadow)}
 .hero-media .tall{grid-row:span 2;height:100%;aspect-ratio:auto}
